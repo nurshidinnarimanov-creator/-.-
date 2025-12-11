@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Лабораторная №10 — Модульность JS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <h1 class="title">Калькулятор процентов</h1>
+        <p class="subtitle">Модульная структура ES-модулей в JavaScript</p>
+      </header>
+
+      <form id="calcForm" class="controls" onsubmit="return false;">
+        <label class="field">
+          <span class="field__label">Число</span>
+          <input id="numInput" class="field__input" type="number" step="any" value="0" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Процент</span>
+          <input id="percentInput" class="field__input" type="number" step="any" value="0" />
+        </label>
+
+        <div class="actions">
+          <button id="calcBtn" class="btn" type="button">Рассчитать</button>
+          <button id="resetBtn" class="btn btn--ghost" type="button">Сброс</button>
+        </div>
+      </form>
+
+      <div class="results" id="results">
+        <h2 class="results__title">Результат</h2>
+        <p class="results__line" id="resultPercent">0% от числа 0: <strong>0.00</strong></p>
+        <p class="results__line" id="resultAdded">0 + 0%: <strong>0.00</strong></p>
+      </div>
+
+      <footer class="card__footer">
+        <small>Лабораторная №10 — Основы модульности и структуры проекта</small>
+      </footer>
+    </section>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
