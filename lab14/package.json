@@ -1,0 +1,11 @@
+{
+  "name": "js-devtools-app",
+  "version": "1.0.0",
+  "description": "Тестируем JS функции + DevTools",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
