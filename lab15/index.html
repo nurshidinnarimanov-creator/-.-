@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Лабораторная 15 — Менеджер расходов</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-900">
+  <div class="max-w-2xl mx-auto py-10 px-4">
+    <h1 class="text-2xl font-bold mb-6 text-center">
+      Менеджер расходов
+    </h1>
+
+    <div class="bg-white shadow rounded-xl p-6 space-y-6">
+
+      <div class="space-y-4">
+        <h2 class="text-lg font-semibold">Добавить расход</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <input id="titleInput" placeholder="Название"
+            class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          <input id="amountInput" type="number" placeholder="Сумма"
+            class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          <input id="categoryInput" placeholder="Категория"
+            class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+        </div>
+        <button id="addBtn"
+          class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 transition-colors">
+          Добавить
+        </button>
+      </div>
+
+      <hr class="border-slate-200" />
+
+      <div class="space-y-3">
+        <h2 class="text-lg font-semibold">Поиск по категории</h2>
+        <div class="flex gap-3 flex-col sm:flex-row">
+          <input id="searchInput" placeholder="Например: еда, транспорт..."
+            class="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+          <button id="searchBtn"
+            class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-emerald-600 text-white hover:bg-emerald-700 active:bg-emerald-800 transition-colors">
+            Искать
+          </button>
+        </div>
+      </div>
+
+      <hr class="border-slate-200" />
+
+      <div class="space-y-3">
+        <h2 class="text-lg font-semibold">Список расходов</h2>
+        <ul id="list" class="space-y-2"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
